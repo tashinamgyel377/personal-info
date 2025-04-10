@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <title>Persenal lafo </title>
+        <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f4ecec;
+                padding: 40px;
+                color: #333;
+            }
+            h1{
+                margin-bottom: 20px;
+                color: #444;
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            th,
+            td {
+                padding: 12px 16px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: skyblue;
+                color: black;
+            }
+            tr:hover{
+                background-color: blue;
+            }
+            .info {
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Personal Info Table</h1>
+        <div class="info" id="info"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Is Single</th>
+                </tr>
+            </thead>
+            <tbody id="data-body"></tbody>
+        </table>
+
+        <script>
+            const personalinfo=[
+            { name: 'perkong', age: 29, sex: 'male'},
+            { name: 'sipsa', age: 25, sex: 'male'},
+            { name: 'bachu', age: 30, sex: 'male'},
+            { name: 'pralaymo', age: 27, sex: 'female'},
+            { name: 'prangchimo', age: 28, sex: 'female'},
+            ]
+
+            document.getElementById(
+                'info'
+            ) .innerText= `The length of array is: ${personalinfo.length}`
+
+            const tbody = document.getElementById('data-body')
+            personalinfo.map((person)=>{
+            const row= document.createElement('tr')
+                row.innerHTML =`
+                <td>${person.name.toUpperCase()}</td>
+                <td>${person.age}</td>
+                <td>${person.sex.toLowerCase()}</td>
+                <td>${person.marriage ? 'Yes' : 'No'}</td>
+                `
+                tbody.appendChild(row)
+            })
+        </script>
+    </body>
+</html>

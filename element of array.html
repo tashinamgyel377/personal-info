@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            let arr = [
+                {name: 'Perkong', age: '20', sex: 'male'},
+                {name: 'Sipsa', age: '28', sex: 'male'},
+                {name: 'Bachu', age: '29', sex: 'male'},
+                {name: 'Pralaymo', age: '26', sex: 'male'},
+                {name: 'Zhokpo', age: '24', sex: 'male'},
+                {name: 'Prangchimo', age: '22', sex: 'female'}
+            ];
+
+            arr.map(person => {
+                document.write(
+                    `Name: ${person.name.toUpperCase()}<br/>
+                     Age: ${person.age}<br/>
+                     Sex: ${person.sex.toLowerCase()}<br/><br/>`
+                );
+            });
+
+            let fruits = ["mango", "apple", "banana", "pineapple", "gtapes"];
+            fruits.map(info => {
+                document.write(`${info} <br/>`);
+            });
+        </script>
+       
+    </body>
+</html>

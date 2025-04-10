@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+            var arr = [-100, 10, 20, 30, 40, 50, 60,70, 80, 90, 100, 670];
+            var max = arr[0];
+            var min = arr[0];
+
+           
+            for (var i=0 ; i<arr.length ; i++){
+                if (arr[i] > max) max = arr[i];
+                if (arr[i] < min) min = arr[i];
+                }
+                document.write("maximum elements using loop : `+max+`<br/>");
+                document.write("minimum elements using loop : `+min+`<br/>");
+
+            map = ((num) => {
+                if (num > max) {
+                    max = num;
+                }
+                if (num < min) {
+                    min = num;
+                }
+
+            })
+            document.write(`The biggest element using map: ${max} <br/>`);
+            
+            document.write(`The smallest element using map: ${min} <br/>`);
+
+            const minimum = Math.min(...arr);
+            const maximum = Math.max(...arr);
+            document.write(`The biggest element using Math: ${maximum} <br/>`);
+            document.write(`The smallest element using Math: ${minimum} <br/>`);    
+        </script>
+    </body>
+</html>
